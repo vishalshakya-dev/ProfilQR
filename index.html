@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ProfilQR</title>
+
+    <!-- ==== Style Links ==== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ==== Custom Style ==== -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ==== Header and Hero Section Start ==== -->
+      <header id="home" class="hero-area">
+        <span class="circles c1"></span><span class="circles c2"></span>
+        <span class="circles c3"></span><span class="circles c4"></span>
+        <span class="circles c8"></span>
+        <div class="container">
+          <nav class="nav-area">
+            <a href="#home">
+              <h1 class="heading">ProfilQR</h1>
+            </a>
+          </nav>
+          <div class="hero-area-container">
+            <div class="hero-text-details">
+              <h1 class="h1-primary-text">Create Profiles</h1>
+              <h1 class="h1-secondary-text" style="color: #5c60ee">Scan QR</h1>
+              <h3 class="h3-primary-text">
+                Seamless Profile Sharing: QR Codes Made Simple
+              </h3>
+              <a href="#about" class="about-project">
+                About Project
+                <i class="fas fa-arrow-down"></i>
+              </a>
+              <a href="#profile" class="create-profile-btn">
+                <i class="fas fa-plus"></i>
+                Create Profile
+              </a>
+            </div>
+            <div>
+              <img src="./images/banner.svg" alt="Hero Image" width="600" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ==== Header and Hero Section End ==== -->
+
+      <!-- ==== About Section Start ==== -->
+      <section id="about" class="about">
+        <span class="circles c5"></span>
+        <span class="circles c6"></span>
+        <span class="circles c7"></span>
+        <div class="container">
+          <h2 class="h2-primary-text">About Project</h2>
+          <div class="about-container">
+            <div class="paragraph-container">
+              <p>
+                Welcome to ProfilQR, the ultimate platform! It's all about
+                making profile sharing easy peasy.
+              </p>
+              <p class="paragraph-container-subtext">
+                This project helps you share your profile easily using QR codes.
+                Here's how it works:
+              </p>
+              <ol class="paragraph-container-list">
+                <li>Fill in your details like bio, contact info, and more.</li>
+                <li>Generate a QR code using the "Create Profile" button.</li>
+                <li>
+                  Share the QR code with your friends and family or stick it on
+                  your business card, website, or social media.
+                </li>
+                <li>
+                  Anyone who scans your code is directed straight to your
+                  profile.
+                </li>
+              </ol>
+              <p class="paragraph-container-subtext">Why Choose This:</p>
+              <ol class="paragraph-container-list">
+                <li>Simple and easy to use.</li>
+                <li>
+                  Seamless sharing. Perfect for networking, freelancers, or
+                  sharing with friends.
+                </li>
+                <li>
+                  Your data is only accessible to those who scan your code.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==== About Section End ==== -->
+
+      <!-- ==== Create Profile Section Start ==== -->
+      <section id="profile" class="profile">
+        <h2 class="h2-primary-text" style="margin-bottom: 5rem">
+          Create Profile
+        </h2>
+        <form class="profile_form" id="profileForm">
+          <input
+            id="name"
+            required
+            type="text"
+            placeholder="Enter your full name"
+            name="name"
+          />
+          <input
+            id="email"
+            required
+            type="email"
+            placeholder="Enter your email"
+            name="email"
+          />
+          <input
+            id="address"
+            required
+            type="text"
+            placeholder="Enter your address"
+            name="address"
+          />
+          <textarea
+            id="message"
+            required
+            cols="30"
+            rows="10"
+            placeholder="Enter your message"
+            name="message"
+          ></textarea>
+          <div class="contact-button-container">
+            <input type="submit" value="Create Profile" />
+          </div>
+        </form>
+        <div id="qrCodeContainer"></div>
+      </section>
+      <!-- ==== Create Profile Section End ==== -->
+    </div>
+
+    <!-- ==== JavaScript Links ==== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"
+      integrity="sha512-pUhApVQtLbnpLtJn6DuzDD5o2xtmLJnJ7oBoMsBnzOkVkpqofGLGPaBJ6ayD2zQe3lCgCibhJBi4cj5wAxwVKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- ==== Custom JavaScript ==== -->
+    <script src="app.js"></script>
+  </body>
+</html>
